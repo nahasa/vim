@@ -6,7 +6,8 @@
 set nocompatible      
 
 " Plugin to order files
-call pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect('~/.vim/bundle')
 call pathogen#helptags()
 
 " Enable filetype plugin
