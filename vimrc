@@ -36,6 +36,9 @@ set mouse=a
 "When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+"Set groovy colors for gradle files
+au BufNewFile,BufRead *.gradle setf groovy 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tabulación e indentación
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -86,8 +89,8 @@ set ignorecase                                        "Ignore case when searchin
 set hlsearch                                          "Highlight search things
 set incsearch                                         "Make search act like search in modern browsers
 set showmatch "Show matching bracets when text indicator is over them
-set wildignore=*.o,*.class,*.pyc,.git,.svn.target/**  "Remove search highlight 
-
+set wildignore=*.o,*.class,*.pyc,.git,.svn.target/**,*.swp,*.zip,*.so "Remove search highlight 
+                
 "Ignore these files while expanding wild chars
 nnoremap <leader><space> :noh<cr>                     
 
@@ -185,7 +188,11 @@ let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
                          \ '\.embed\.manifest$', '\.embed\.manifest.res$',
                                      \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
-
+"""""""""""""""""""""""""""""""
+"=> Crtlp 
+""""""""""""""""""""""""""""""
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 """""""""""""""""""""""""""""""
 "=> Gundo
