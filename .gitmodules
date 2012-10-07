@@ -37,3 +37,6 @@
 [submodule "vim-autoClose"]
 	path = vim-autoClose
 	url = https://github.com/vim-scripts/AutoClose.git
+[submodule "bundle/vim-autoClose"]
+	path = bundle/vim-autoClose
+	url = https://github.com/vim-scripts/AutoClose.git
