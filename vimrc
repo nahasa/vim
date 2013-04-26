@@ -7,7 +7,7 @@ set nocompatible
 
 " Plugin to order files
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect('~/.vim/bundle')
+call pathogen#infect('~/.vim/bundle/{}')
 call pathogen#helptags()
 
 " Enable filetype plugin
@@ -169,6 +169,9 @@ set diffopt+=iwhite
 """""""""""""""""""""""""""""""
 "=> NERD Tree Plugin Settings
 """""""""""""""""""""""""""""""
+
+"Can add/modifiy proyect's structure
+set modifiable
 
 " Toggle the NERD Tree on an off with F3
 nnoremap <F2> :NERDTreeToggle<CR>
