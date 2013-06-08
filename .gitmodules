@@ -4,27 +4,32 @@
 [submodule "bundle/EasyGrep"]
 	path = bundle/EasyGrep
 	url = https://github.com/vim-scripts/EasyGrep.git
+    ignore = dirty
 [submodule "bundle/NERDTree"]
 	path = bundle/NERDTree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/Gundo"]
 	path = bundle/Gundo
 	url = https://github.com/vim-scripts/Gundo.git
+    ignore = dirty
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
 	url = https://github.com/vim-scripts/vcscommand.vim.git
+    ignore = dirty
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+    ignore = dirty
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/snipMate"]
 	path = bundle/snipMate
 	url = https://github.com/msanders/snipmate.vim.git
+    ignore = dirty
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -34,9 +39,7 @@
 [submodule "bundle/LaTeX"]
 	path = bundle/LaTeX
 	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
-[submodule "vim-autoClose"]
-	path = vim-autoClose
-	url = https://github.com/vim-scripts/AutoClose.git
+    ignore = dirty
 [submodule "bundle/vim-autoClose"]
 	path = bundle/vim-autoClose
 	url = https://github.com/vim-scripts/AutoClose.git
