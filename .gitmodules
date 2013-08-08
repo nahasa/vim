@@ -43,3 +43,6 @@
 [submodule "bundle/vim-autoClose"]
 	path = bundle/vim-autoClose
 	url = https://github.com/vim-scripts/AutoClose.git
+[submodule "bundle/vim-visual-increment"]
+	path = bundle/vim-visual-increment
+	url = https://github.com/triglav/vim-visual-increment.git
