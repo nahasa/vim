@@ -196,6 +196,7 @@ let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
 """"""""""""""""""""""""""""""
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_working_path_mode = 'a'
 
 """""""""""""""""""""""""""""""
 "=> Gundo
