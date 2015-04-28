@@ -41,7 +41,7 @@ au BufNewFile,BufRead *.gradle setf groovy
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tabulación e indentación
-" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab "replace tab to spaces
 set shiftwidth=4
 set tabstop=4
@@ -54,25 +54,38 @@ set noai " No Auto indent para poder pegar bien el texto del Clipboard
 set si "Smart indent
 set wrap "Wrap lines
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Copy && Paste
+" => Enable in all OS http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/
+" => Plugin to use clipboard https://github.com/svermeulen/vim-easyclip
+" => "+y this is the command to yank in + OS register
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard+=unnamed  
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+set paste               " Paste from a windows or from vim
+set go+=a               " Visual selection automatically copied to the clipboard"
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
-" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmenu
-set wildmode=full "Make the command-line completion better
-set ruler "Always show current position
-set number "Mostrar en el lateral número de linea
-set cmdheight=2 "The commandbar height
-set hid "Change buffer - without saving
-set title "Show current file name
+set wildmode=full       "Make the command-line completion better
+set ruler               "Always show current position
+set number              "Mostrar en el lateral número de linea
+set cmdheight=2         "The commandbar height
+set hid                 "Change buffer - without saving
+set title               "Show current file name
 "set cursorline "Underline current line
 
 " Set backspace config
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-set nolazyredraw "Don't redraw while executing macros 
-set magic "Set magic on, for regular expressions
-set mat=2 "How many tenths of a second to blink
+set nolazyredraw         "Don't redraw while executing macros 
+set magic                "Set magic on, for regular expressions
+set mat=2                "How many tenths of a second to blink
 
 " No sound on errors
 set noerrorbells
@@ -83,13 +96,13 @@ set tm=500
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=>BUCARDOR /
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set ignorecase                                        "Ignore case when searching
-set hlsearch                                          "Highlight search things
-set incsearch                                         "Make search act like search in modern browsers
-set showmatch "Show matching bracets when text indicator is over them
-set wildignore=*.o,*.class,*.pyc,.git,.svn.target/**,*.swp,*.zip,*.so "Remove search highlight 
+set ignorecase           "Ignore case when searching
+set hlsearch             "Highlight search things
+set incsearch            "Make search act like search in modern browsers
+set showmatch            "Show matching bracets when text indicator is over them
+set wildignore=*.o,*.class,*.pyc,.git,.svn.target/**,*.swp,*.zip,*.so 
                 
 "Ignore these files while expanding wild chars
 nnoremap <leader><space> :noh<cr>                     
@@ -154,65 +167,63 @@ map <c-c> <c-w>c
 :imap <C-t> <Esc>:tabnew<CR>
  
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> VIM DIFF
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set diffopt+=iwhite
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""
-"=> NERD Tree Plugin Settings
-"""""""""""""""""""""""""""""""
+    """""""""""""""""""""""""""""""
+    "=> NERD Tree Plugin Settings
+    """""""""""""""""""""""""""""""
 
-"Can add/modifiy proyect's structure
-set modifiable
+    "Can add/modifiy proyect's structure
+    set modifiable
 
-" Toggle the NERD Tree on an off with F3
-nnoremap <F2> :NERDTreeToggle<CR>
+    " Toggle the NERD Tree on an off with F3
+    nnoremap <F2> :NERDTreeToggle<CR>
 
-"Find the current file in the file browse
-nnoremap <F3> :NERDTreeFind<CR> 
+    "Find the current file in the file browse
+    nnoremap <F3> :NERDTreeFind<CR> 
 
-" Store the bookmarks file in perforce
-" let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
+    " Store the bookmarks file in perforce
+    " let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
 
-" Show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
+    " Show the bookmarks table on startup
+    let NERDTreeShowBookmarks=1
 
-"Don't display these kinds of files
-let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
-             \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
-                         \ '\.embed\.manifest$', '\.embed\.manifest.res$',
-                                     \ '\.intermediate\.manifest$', '^mt.dep$' ]
+    "Don't display these kinds of files
+    let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
+                 \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
+                             \ '\.embed\.manifest$', '\.embed\.manifest.res$',
+                                         \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
-"""""""""""""""""""""""""""""""
-"=> Crtlp 
-""""""""""""""""""""""""""""""
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_working_path_mode = 'a'
+    """""""""""""""""""""""""""""""
+    "=> Crtlp 
+    """"""""""""""""""""""""""""""
+    nnoremap <leader>f :CtrlP<CR>
+    nnoremap <leader>b :CtrlPBuffer<CR>
+    let g:ctrlp_working_path_mode = 'a'
 
-"""""""""""""""""""""""""""""""
-"=> Gundo
-""""""""""""""""""""""""""""""
-nnoremap <leader>g :GundoToggle<CR>
+    """""""""""""""""""""""""""""""
+    "=> Gundo
+    """"""""""""""""""""""""""""""
+    nnoremap <leader>g :GundoToggle<CR>
 
-"""""""""""""""""""""""""""""
-"=>Tag List
-"""""""""""""""""""""""""""""
-"set tags=tags
-"map <leader>t :TlistToggle<CR>
-""let Tlist_Show_One_File = 1
-"let Tlist_Use_Right_Window = 1
+    """""""""""""""""""""""""""""
+    "=>Tag List
+    """""""""""""""""""""""""""""
+    "set tags=tags
+    "map <leader>t :TlistToggle<CR>
+    ""let Tlist_Show_One_File = 1
+    "let Tlist_Use_Right_Window = 1
 
-"""""""""""""""""""""""""""""
-"=> EasyGrep
-"""""""""""""""""""""""""""""
-"Show always on bottom even two vertical split windows
-let g:EasyGrepWindowPosition="botright"
+    """""""""""""""""""""""""""""
+    "=> EasyGrep
+    """""""""""""""""""""""""""""
+    "Show always on bottom even two vertical split windows
+    let g:EasyGrepWindowPosition="botright"
