@@ -226,4 +226,10 @@ set diffopt+=iwhite
     "=> EasyGrep
     """""""""""""""""""""""""""""
     "Show always on bottom even two vertical split windows
+
     let g:EasyGrepWindowPosition="botright"
+
+    """""""""""""""""""""""""""""
+    "=> Git Gutter 
+    """""""""""""""""""""""""""""   
+    let g:gitgutter_map_keys = 0
