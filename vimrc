@@ -23,12 +23,10 @@ set history=1000
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" Switch on syntax highlighting.
+" Visual settings
 syntax on
-
-"Color tipografía y menu contextual 
 colorscheme molokai 
-set guifont=Courier\ New\ 10
+set t_Co=256 "Set t 256 color term
 
 " Mouse enable
 set mouse=a
@@ -233,3 +231,8 @@ set diffopt+=iwhite
     "=> Git Gutter 
     """""""""""""""""""""""""""""   
     let g:gitgutter_map_keys = 0
+
+    """""""""""""""""""""""""""""
+    "=> Airline
+    """""""""""""""""""""""""""""   
+    let g:airline_theme="hybridline"
