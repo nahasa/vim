@@ -54,3 +54,6 @@
 	path = bundle/vim-visual-increment
 	url = https://github.com/triglav/vim-visual-increment.git
     ignore = dirty
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
