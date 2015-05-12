@@ -26,6 +26,7 @@ set autoread
 " Visual settings
 syntax on
 colorscheme molokai 
+set encoding=utf-8
 set t_Co=256 "Set t 256 color term
 
 " Mouse enable
@@ -232,7 +233,6 @@ set diffopt+=iwhite
     "=> EasyGrep
     """""""""""""""""""""""""""""
     "Show always on bottom even two vertical split windows
-
     let g:EasyGrepWindowPosition="botright"
 
     """""""""""""""""""""""""""""
@@ -244,3 +244,11 @@ set diffopt+=iwhite
     "=> Airline
     """""""""""""""""""""""""""""   
     let g:airline_theme="hybridline"
+
+    """""""""""""""""""""""""""""
+    "=> IncSearch
+    """""""""""""""""""""""""""""   
+    map /  <Plug>(incsearch-forward)
+    map ?  <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+
