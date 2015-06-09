@@ -222,14 +222,6 @@ set diffopt+=iwhite
     nnoremap <leader>g :GundoToggle<CR>
 
     """""""""""""""""""""""""""""
-    "=>Tag List
-    """""""""""""""""""""""""""""
-    "set tags=tags
-    "map <leader>t :TlistToggle<CR>
-    ""let Tlist_Show_One_File = 1
-    "let Tlist_Use_Right_Window = 1
-
-    """""""""""""""""""""""""""""
     "=> EasyGrep
     """""""""""""""""""""""""""""
     "Show always on bottom even two vertical split windows
