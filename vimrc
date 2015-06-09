@@ -205,14 +205,14 @@ set diffopt+=iwhite
 
     "Don't display these kinds of files
     let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
-                 \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
-                             \ '\.embed\.manifest$', '\.embed\.manifest.res$',
-                                         \ '\.intermediate\.manifest$', '^mt.dep$' ]
+        \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
+        \ '\.embed\.manifest$', '\.embed\.manifest.res$',
+        \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
     """""""""""""""""""""""""""""""
     "=> Crtlp 
     """"""""""""""""""""""""""""""
-    nnoremap <leader>f :CtrlP<CR>
+    nnoremap <leader>p :CtrlP<CR>
     nnoremap <leader>b :CtrlPBuffer<CR>
     let g:ctrlp_working_path_mode = 'a'
 
