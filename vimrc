@@ -244,6 +244,8 @@ set diffopt+=iwhite
     "=> Airline
     """""""""""""""""""""""""""""   
     let g:airline_theme="hybridline"
+    let g:timeoutlen=50
+    set laststatus=2 " load at init https://github.com/bling/vim-airline/issues/358
 
     """""""""""""""""""""""""""""
     "=> IncSearch
