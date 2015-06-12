@@ -185,17 +185,55 @@ set diffopt+=iwhite
 "=> PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+    """""""""""""""""""""""""""""
+    "=> Airline
+    """""""""""""""""""""""""""""   
+    let g:airline_theme="hybridline"
+    let g:timeoutlen=50
+    set laststatus=2 " load at init https://github.com/bling/vim-airline/issues/358
+
+
+    """""""""""""""""""""""""""""""
+    "=> Crtlp 
+    """"""""""""""""""""""""""""""
+    nnoremap <leader>p :CtrlP<CR>
+    nnoremap <leader>b :CtrlPBuffer<CR>
+    let g:ctrlp_working_path_mode = 'a'
+
+    """""""""""""""""""""""""""""
+    "=> EasyGrep
+    """""""""""""""""""""""""""""
+    "Show always on bottom even two vertical split windows
+    let g:EasyGrepWindowPosition="botright"
+
+    """""""""""""""""""""""""""""""
+    "=> EasyTags
+    """""""""""""""""""""""""""""""
+    let g:easytags_file = '~/.vim/tags'
+    let g:easytags_dynamic_files = 1
+
+    """""""""""""""""""""""""""""
+    "=> Git Gutter 
+    """""""""""""""""""""""""""""   
+    let g:gitgutter_map_keys = 0
+
+    """""""""""""""""""""""""""""""
+    "=> Gundo
+    """"""""""""""""""""""""""""""
+    nnoremap <leader>g :GundoToggle<CR>
+
+    """""""""""""""""""""""""""""
+    "=> IncSearch
+    """""""""""""""""""""""""""""   
+    map /  <Plug>(incsearch-forward)
+    map ?  <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+
     """""""""""""""""""""""""""""""
     "=> NERD Tree Plugin Settings
     """""""""""""""""""""""""""""""
-
-    "Can add/modifiy proyect's structure
-    set modifiable
-
-    " Toggle the NERD Tree on an off with F3
-    nnoremap <F2> :NERDTreeToggle<CR>
-
-    "Find the current file in the file browse
+    set modifiable "Can add/modifiy proyect's structure
+    nnoremap <F2> :NERDTreeToggle<CR> 
     nnoremap <F3> :NERDTreeFind<CR> 
 
     " Store the bookmarks file in perforce
@@ -211,39 +249,8 @@ set diffopt+=iwhite
         \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
     """""""""""""""""""""""""""""""
-    "=> Crtlp 
-    """"""""""""""""""""""""""""""
-    nnoremap <leader>p :CtrlP<CR>
-    nnoremap <leader>b :CtrlPBuffer<CR>
-    let g:ctrlp_working_path_mode = 'a'
-
+    "=> TagBar
     """""""""""""""""""""""""""""""
-    "=> Gundo
-    """"""""""""""""""""""""""""""
-    nnoremap <leader>g :GundoToggle<CR>
+    nmap <F4> :TagbarToggle<CR>
 
-    """""""""""""""""""""""""""""
-    "=> EasyGrep
-    """""""""""""""""""""""""""""
-    "Show always on bottom even two vertical split windows
-    let g:EasyGrepWindowPosition="botright"
-
-    """""""""""""""""""""""""""""
-    "=> Git Gutter 
-    """""""""""""""""""""""""""""   
-    let g:gitgutter_map_keys = 0
-
-    """""""""""""""""""""""""""""
-    "=> Airline
-    """""""""""""""""""""""""""""   
-    let g:airline_theme="hybridline"
-    let g:timeoutlen=50
-    set laststatus=2 " load at init https://github.com/bling/vim-airline/issues/358
-
-    """""""""""""""""""""""""""""
-    "=> IncSearch
-    """""""""""""""""""""""""""""   
-    map /  <Plug>(incsearch-forward)
-    map ?  <Plug>(incsearch-backward)
-    map g/ <Plug>(incsearch-stay)
 
