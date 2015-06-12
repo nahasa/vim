@@ -101,7 +101,7 @@ set ignorecase           "Ignore case when searching
 set hlsearch             "Highlight search things
 set incsearch            "Make search act like search in modern browsers
 set showmatch            "Show matching bracets when text indicator is over them
-set wildignore+=*.o,*.class,*.pyc,.git,.svn.target/**,*.swp,*.zip,*.so
+set wildignore+=*.o,*.class,*.pyc,.git,.svn.target/**,*.swp,*.zip,*.so,*\\tmp\\*
 set wildignore+=*/.cache/*,*/tmp/*,*/.neocon/*,*.log,*.gz,*.bz2,*.bmp,*.ppt
                 
 "Ignore these files while expanding wild chars
