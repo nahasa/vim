@@ -92,6 +92,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Markdown
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Search /
