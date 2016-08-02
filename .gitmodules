@@ -64,11 +64,13 @@
 	path = bundle/vim-incsearch
 	url = https://github.com/haya14busa/incsearch.vim
 [submodule "bundle/vim-easytags"]
-	path = bundle/vim-easytags
-	url = git@github.com:xolox/vim-easytags.git
+    path = bundle/vim-easytags
+    url = https://github.com/xolox/vim-easytags.git
 [submodule "bundle/vim-misc"]
-	path = bundle/vim-misc
-	url = git@github.com:xolox/vim-misc.git
+    path = bundle/vim-misc
+    url = https://github.com/xolox/vim-misc.git
 [submodule "bundle/vim-tagbar"]
-	path = bundle/vim-tagbar
-	url = git@github.com:majutsushi/tagbar.git
+    path = bundle/vim-tagbar
+    url = https://github.com/majutsushi/tagbar.git
+
+
